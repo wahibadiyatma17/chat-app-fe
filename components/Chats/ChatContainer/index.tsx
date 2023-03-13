@@ -3,6 +3,8 @@ import { AiOutlineSearch } from 'react-icons/ai';
 import tw, { styled } from 'twin.macro';
 
 import TextInput from '@/components/Inputs/TextInput';
+import GroupChat from '../GroupChat';
+import SingleChat from '../SingleChat';
 
 const ChatContainer: FC = () => {
   return (
@@ -11,6 +13,8 @@ const ChatContainer: FC = () => {
         <StyledSearchInput>
           <TextInput suffix={<AiOutlineSearch width={12} height={12} />} placeholder="Search" />
         </StyledSearchInput>
+        <GroupChat />
+        <SingleChat />
       </div>
     </StyledChatContainer>
   );
@@ -40,6 +44,7 @@ const StyledChatContainer = styled.div`
 const StyledSearchInput = styled.div`
   width: 100%;
   max-width: 29.5rem;
+  margin-bottom: 2px;
 
   .suffix-container {
     font-size: 1.5rem !important;
