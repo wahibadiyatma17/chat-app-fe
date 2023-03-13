@@ -1,15 +1,11 @@
-import React from "react";
-import type { AppProps } from "next/app";
+import React from 'react';
+import type { AppProps } from 'next/app';
 
-import { Toaster } from "react-hot-toast";
-import { QueryClientProvider } from "react-query";
+import { Toaster } from 'react-hot-toast';
+import { QueryClientProvider } from 'react-query';
+import queryClient from 'config/queryClient';
 
-import queryClient from "config/queryClient";
-
-import "@fontsource/poppins/400.css";
-import "@fontsource/poppins/500.css";
-import "@fontsource/poppins/600.css";
-import "@fontsource/poppins/700.css";
+import 'styles/globals.css';
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (
