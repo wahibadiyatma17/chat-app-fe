@@ -24,8 +24,8 @@ const ChatList: FC = () => {
 export default ChatList;
 
 const StyledSearchInput = styled.div`
-  width: 100%;
-  max-width: 29.5rem;
+  width: 95%;
+
   margin-bottom: 2px;
 
   .suffix-container {

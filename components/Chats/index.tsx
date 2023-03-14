@@ -34,7 +34,7 @@ const renderChatBoxContent = (currentPage: ChatPageType) => {
 const StyledChatBox = styled.div`
   position: absolute;
   height: 500px;
-  width: 502px;
+  width: 602px;
 
   bottom: 80px;
   border: 1px solid #bdbdbd;

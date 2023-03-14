@@ -34,6 +34,7 @@ const StyledGroupChatList = styled.div`
   padding-bottom: 36px;
   border-bottom: 1px solid #828282;
   margin-top: 24px;
+  cursor: pointer;
 
   .chat__container {
     display: flex;
