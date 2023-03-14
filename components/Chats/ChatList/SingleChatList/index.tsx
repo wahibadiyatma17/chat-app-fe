@@ -1,10 +1,14 @@
 import React, { FC } from 'react';
-import { MdOutlinePersonOutline } from 'react-icons/md';
 import { styled } from 'twin.macro';
 
-const SingleChat: FC = () => {
+import { BaseChatProps } from '@/common/types/ChatTypes';
+
+type SingleChatProps = BaseChatProps;
+
+const SingleChat: FC<SingleChatProps> = (props) => {
+  const { onClick } = props;
   return (
-    <StyledSingleChat>
+    <StyledSingleChat onClick={() => onClick()}>
       <div className="chat__container">
         <SingleChatIcon />
         <div className="chat-content__container">

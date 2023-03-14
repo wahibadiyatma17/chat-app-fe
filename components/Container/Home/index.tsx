@@ -3,7 +3,7 @@ import Image from 'next/image';
 import tw, { styled } from 'twin.macro';
 import ChatButton from '@/components/Buttons/ChatButton';
 import TaskButton from '@/components/Buttons/TaskButton';
-import ChatContainer from '@/components/Chats/ChatContainer';
+import ChatBox from '@/components/Chats';
 
 const Home: FC = () => {
   const [isShowMenu, setIsShowMenu] = useState(false);
@@ -16,7 +16,7 @@ const Home: FC = () => {
         onMouseEnter={() => setIsShowMenu(true)}
         onMouseLeave={() => setIsShowMenu(false)}
       >
-        {activeMenu === 'chat' && <ChatContainer />}
+        {activeMenu === 'chat' && <ChatBox />}
 
         {activeMenu === 'idle' && (
           <div tw="w-[68px] h-[68px] bg-[#2F80ED] rounded-full flex items-center justify-center">

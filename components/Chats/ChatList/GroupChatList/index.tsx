@@ -2,9 +2,14 @@ import React, { FC } from 'react';
 import { MdOutlinePersonOutline } from 'react-icons/md';
 import { styled } from 'twin.macro';
 
-const GroupChat: FC = () => {
+import { BaseChatProps } from '@/common/types/ChatTypes';
+
+type GroupChatListProps = BaseChatProps;
+
+const GroupChatList: FC<GroupChatListProps> = (props) => {
+  const { onClick } = props;
   return (
-    <StyledGroupChat>
+    <StyledGroupChatList onClick={() => onClick()}>
       <div className="chat__container">
         <GroupIcon />
         <div className="chat-content__container">
@@ -16,13 +21,13 @@ const GroupChat: FC = () => {
         </div>
         <span tw="text-xs text-[#4F4F4F]">January 1, 2021 19:10</span>
       </div>
-    </StyledGroupChat>
+    </StyledGroupChatList>
   );
 };
 
-export default GroupChat;
+export default GroupChatList;
 
-const StyledGroupChat = styled.div`
+const StyledGroupChatList = styled.div`
   width: 100%;
   display: flex;
   justify-content: space-between;
