@@ -22,7 +22,8 @@
     "no-console": "off",
     "@next/next/no-img-element": "warn",
     "react/no-unknown-property": "off",
-    "react-hooks/exhaustive-deps": "off"
+    "react-hooks/exhaustive-deps": "off",
+    "react/display-name": "off"
   },
   "parserOptions": {
     "ecmaFeatures": {

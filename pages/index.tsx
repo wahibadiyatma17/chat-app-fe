@@ -1,20 +1,20 @@
-import Head from "next/head";
-import { NextPage } from "next";
-import React from "react";
-import "twin.macro";
+import React from 'react';
+import Head from 'next/head';
+import { NextPage } from 'next';
+import 'twin.macro';
 
-const Index: NextPage = () => {
+import Home from '@/components/Container/Home';
+
+const HomePage: NextPage = () => {
   return (
     <>
       <Head>
         <title>Home</title>
-        <meta name="description" content={""} />
+        <meta name="description" content={''} />
       </Head>
-      <div tw="min-h-screen w-full flex items-center justify-center">
-        <h3 tw="text-xl font-bold">Welcome to homepage!</h3>
-      </div>
+      <Home />
     </>
   );
 };
 
-export default Index;
+export default HomePage;
