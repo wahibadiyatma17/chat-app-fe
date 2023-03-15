@@ -5,6 +5,7 @@ import { Toaster } from 'react-hot-toast';
 import { QueryClientProvider } from 'react-query';
 import queryClient from 'config/queryClient';
 
+import '@fontsource/lato';
 import 'styles/globals.css';
 
 function MyApp({ Component, pageProps }: AppProps) {

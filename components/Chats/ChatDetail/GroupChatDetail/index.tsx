@@ -29,12 +29,35 @@ const GroupChatDetail: FC = () => {
         </div>
       </div>
       <div className="group-chat__content">
-        <OwnChatBuble />
-        <OtherChatBuble />
-        <OwnChatBuble />
-        <OtherChatBuble />
-        <OwnChatBuble />
-        <OtherChatBuble />
+        <OwnChatBuble
+          text="No worries. It will be completed ASAP. I have asked him yesterday."
+          time="19:32"
+        />
+        <OtherChatBuble
+          color="#E5A443"
+          backgroundColor="#FCEED3"
+          name="Mary Hilda"
+          text="Hello Obaidullah, I will be your case advisor for case #029290. I have assigned some homework for you to fill. Please keep up with the due dates. Should you have any questions, you can message me anytime. Thanks."
+          time="19:32"
+        />
+        <OwnChatBuble
+          text="Please contact Mary for questions regarding the case bcs she will be managing your forms from now on! Thanks Mary."
+          time="19:32"
+        />
+        <OtherChatBuble
+          color="#E5A443"
+          backgroundColor="#FCEED3"
+          name="Mary Hilda"
+          text="Sure thing, Claren"
+          time="19:32"
+        />
+        <OtherChatBuble
+          color="#43B78D"
+          backgroundColor="#D2F2EA"
+          name="Obaidullah Amarkhil"
+          text="Morning. I’ll try to do them. Thanks"
+          time="19:32"
+        />
       </div>
       <div className="group-chat__footer">
         <div tw="w-[83%] mr-3">

@@ -1,7 +1,13 @@
 import React, { FC, useState } from 'react';
 import 'twin.macro';
 
-const OwnChatBuble: FC = () => {
+interface OwnChatBubbleProps {
+  text: string;
+  time: string;
+}
+
+const OwnChatBuble: FC<OwnChatBubbleProps> = (props) => {
+  const { text, time } = props;
   const [showMenu, setShowMenu] = useState(false);
 
   return (
@@ -18,10 +24,8 @@ const OwnChatBuble: FC = () => {
           {showMenu && <ChatMenu />}
         </div>
         <div tw="flex flex-col gap-2 items-start justify-center p-3 rounded-[5px] bg-[#EEDCFF] max-w-[400px] flex-wrap">
-          <span tw="font-light text-[#4F4F4F] text-sm">
-            No Worries. It will be completed ASAP. I have asked him yesterday.
-          </span>
-          <span tw="text-[#4F4F4F] text-xs">19:32</span>
+          <span tw="font-light text-[#4F4F4F] text-sm">{text}</span>
+          <span tw="text-[#4F4F4F] text-xs">{time}</span>
         </div>
       </div>
     </div>
