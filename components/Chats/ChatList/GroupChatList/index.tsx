@@ -4,22 +4,29 @@ import { styled } from 'twin.macro';
 
 import { BaseChatProps } from '@/common/types/ChatTypes';
 
-type GroupChatListProps = BaseChatProps;
+interface BaseGroupChatProps {
+  title: string;
+  date: string;
+  latestChatName: string;
+  latestChatText: string;
+}
+
+type GroupChatListProps = BaseChatProps & BaseGroupChatProps;
 
 const GroupChatList: FC<GroupChatListProps> = (props) => {
-  const { onClick } = props;
+  const { onClick, title, date, latestChatName, latestChatText } = props;
   return (
     <StyledGroupChatList onClick={() => onClick()}>
       <div className="chat__container">
         <GroupIcon />
         <div className="chat-content__container">
-          <h4 className="group-name">109920-Naturalization</h4>
+          <h4 className="group-name">{title}</h4>
           <div tw="flex flex-col gap-1">
-            <h5 className="person-name">Cameron Phillips:</h5>
-            <span className="chat-text">Please Check This Out!</span>
+            <h5 className="person-name">{latestChatName}</h5>
+            <span className="chat-text">{latestChatText}</span>
           </div>
         </div>
-        <span tw="text-xs text-[#4F4F4F]">January 1, 2021 19:10</span>
+        <span tw="text-xs text-[#4F4F4F]">{date}</span>
       </div>
     </StyledGroupChatList>
   );

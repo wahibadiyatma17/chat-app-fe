@@ -3,19 +3,25 @@ import { styled } from 'twin.macro';
 
 import { BaseChatProps } from '@/common/types/ChatTypes';
 
-type SingleChatProps = BaseChatProps;
+interface BaseSingleChatProps {
+  title: string;
+  date: string;
+  latestChatText: string;
+}
+
+type SingleChatProps = BaseChatProps & BaseSingleChatProps;
 
 const SingleChat: FC<SingleChatProps> = (props) => {
-  const { onClick } = props;
+  const { onClick, title, date, latestChatText } = props;
   return (
     <StyledSingleChat onClick={() => onClick()}>
       <div className="chat__container">
         <SingleChatIcon />
         <div className="chat-content__container">
-          <h4 className="person-name">FastVisa Support</h4>
-          <span className="chat-text">Hey there! welcome to your inbox</span>
+          <h4 className="person-name">{title}</h4>
+          <span className="chat-text">{latestChatText}</span>
         </div>
-        <span tw="text-xs text-[#4F4F4F]">January 1, 2021 19:10</span>
+        <span tw="text-xs text-[#4F4F4F]">{date}</span>
       </div>
     </StyledSingleChat>
   );
